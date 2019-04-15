@@ -6,8 +6,10 @@ PHP/HTML/Bootstrap full web app made at NETLOR SAS (during a 2 weeks internship 
 ![Screenshots](https://github.com/fanfan54/VacationPanel/raw/master/screenshots.png "Screenshots")
 
 ## What is VacationPanel?
-VacationPanel is a full-featured intranet application (you'll need to log in with your account in order to use it) that allows enterprises to manage vacations/paid holidays for their staff.
-It uses PHP on the Apache2 web server (tested on PHP 5.3.10) and a MySQL database (tested on MySQL 5.5.37) as a backend, and a simple HTML5 front-end (using jQuery plugins, AJAX for some features), styled with Twitter Bootstrap.
+VacationPanel is a **full-featured intranet application** (you'll need to log in with your account in order to use it) that allows enterprises to manage vacations/paid holidays for their staff.
+
+It uses **PHP** on the Apache2 web server (tested on PHP 5.3.10) and a **MySQL** database (tested on MySQL 5.5.37) as a backend, and a simple HTML5 front-end (using jQuery plugins, AJAX for some features), styled with **Twitter Bootstrap**.
+
 The front-end, and some parts of the code, are in french.
 
 I wrote it during a 2 weeks internship at [NETLOR SAS](https://www.netlor.fr), a company that develops business applications, e-commerce websites, B2B and B2C solutions since 2000.
@@ -40,27 +42,28 @@ This code is **very** old, I wasn't at EPITECH and had no formation (I used vari
 * Identifiant: francoislefevre
 * Mot de passe (password): stagiaire1
 
-7. You'll be redirected to the sign-up page. Create any account you want!
+
+You'll be redirected to the sign-up page. Create any account you want!
 
 ## User roles
 
 There are 3 roles available for the accounts, with different permissions:
 
-* admin : he can go to every module, he's the only one that has access to system settings (Paramètres système). He can create "gestionnaire" and/or "employé" accounts.
-* gestionnaire ("manager" in french): he can manage vacations ("Gérer les congés"), manage the staff he's affected to (in "Gérer les employés"), and create "employé" accounts.
-* employé ("staff/employee" in french, referenced in code as "worker"): he can only ask for vacations (in "Demander mes congés") on the datepicker
+* **admin** : he can go to every module, he's the only one that has access to system settings (Paramètres système). He can create "gestionnaire" and/or "employé" accounts.
+* **gestionnaire** ("manager" in french): he can manage vacations ("Gérer les congés"), manage the staff he's affected to (in "Gérer les employés"), and create "employé" accounts.
+* **employé** ("staff/employee" in french, referenced in code as "worker"): he can only ask for vacations (in "Demander mes congés") on the datepicker
 
-Please note that a user can have multiple roles, and that there can be as many users as you want. You can event create multiple "admin" accounts.
+A single user can have multiple roles, and that there can be as many users as you want. You can event create multiple "admin" accounts.
 
 ## Modules
 
 5 modules (pages) are available in the application (not all of them have been implemented during my internship), defined in the `vacationpanel.class.php` file and shown in the tabs bar on top of the page:
 
-* vacationask / "Demander mes congés" (available for "employé" accounts)
-* vacationmanage / "Gérer les congés" (available for "manager" accounts)
-* manageusers / "Gérer les employés" (for "manager" accounts) or "Gérer les gestionnaires" (for "admin" accounts)
-* registerusers / "Ajouter des employés" (for "manager" accounts) or "Ajouter des gestionnaires" (for "admin" accounts) (fully implemented)
-* systemsettings / "Paramètres système" (available for "admin" accounts)
+* **vacationask** / "Demander mes congés" (available for "employé" accounts)
+* **vacationmanage** / "Gérer les congés" (available for "manager" accounts)
+* **manageusers** / "Gérer les employés" (for "manager" accounts) or "Gérer les gestionnaires" (for "admin" accounts)
+* **registerusers** / "Ajouter des employés" (for "manager" accounts) or "Ajouter des gestionnaires" (for "admin" accounts) (fully implemented)
+* **systemsettings** / "Paramètres système" (available for "admin" accounts)
 
 Note: there is also an automatic installer module I started (in the `_install.php` file), but I didn't have time to finish it, it's not working (for now), that's why I didn't talk about it.
 
@@ -80,7 +83,7 @@ Contains 7 columns:
 * days (number of vacation days available, only used for "worker" accounts)
 * isEnabled (boolean, true if the user can log in to his account)
 
-## dims_mod_vacationpanel_vacations
+### dims_mod_vacationpanel_vacations
 Contains 5 columns:
 
 * id

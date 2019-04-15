@@ -1,0 +1,58 @@
+/**
+ * CSS global pour tout le projet
+ */
+body {
+	padding-top: 10px;
+	margin-top: 10px !important;
+}
+
+/* Ces éléments sont toujours affichés au-dessus des autres et ne bougent pas au scroll */
+.alert_banner {
+	position: fixed;
+	z-index: 9999;
+}
+
+/* À des fins de tests */
+.cssdebug {
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.text-primary {
+	color: #337ab7;
+}
+
+.text-info {
+	color: #5bc0de;
+}
+
+.text-warning {
+	color: #f0ad4e;
+}
+
+.text-danger {
+	color: #d9534f;
+}
+
+.badge-primary {
+	background-color: #337ab7;
+}
+
+.badge-info {
+	background-color: #5bc0de;
+}
+
+.badge-warning {
+	background-color: #f0ad4e;
+}
+
+.badge-success {
+        background-color: #3c763d;
+}
+
+.badge-danger {
+	background-color: #d9534f;
+}

@@ -1,0 +1,202 @@
+/**
+ * CSS pour l'application
+ */
+
+body {
+	padding-top: 8em;
+}
+
+.navbar .divider-vertical {
+height: 50px;
+margin: 0 9px;
+border-right: 1px solid #ffffff;
+border-left: 1px solid #f2f2f2;
+}
+
+.navbar-inverse .divider-vertical {
+border-right-color: #222222;
+border-left-color: #111111;
+}
+
+@media (max-width: 767px) {
+.navbar-collapse .nav > .divider-vertical {
+    display: none;
+  }
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.badge-notify{
+   top: -5px !important;
+   left: -10px !important;
+   margin-right: -20px !important;
+   background-color: #333 !important;
+   color: white !important;
+}
+
+.color-white {
+	color: white !important;
+}
+
+.menu-button-icon {
+	margin: 0;
+	font-size: 1.4em;
+}
+
+#usersettings-menu-icon, #logout-menu-icon {
+	color: white !important;
+}
+
+#content-mode-tabs-nav {
+  margin-left: 1em;
+  margin-right: 1em
+}
+
+@media (max-width: 767px) {
+  #content-mode-tabs-nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Set the fixed height of the footer here */
+footer {
+  height: 60px;
+  background-color: #f5f5f5;
+  margin-top:50px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+footer {
+  background-color:#414141;
+}
+
+footer a {
+  color:#efefef;
+}
+
+.popover {
+  z-index: 8000;
+}
+
+.highlight-background {
+  background-color: yellow !important;
+}
+
+.popover {
+  position: fixed !important;
+}
+
+.field-ajax-spinner {
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+
+  margin: -32px 0 0 -32px;
+}
+
+.datepicker-ajax-spinner {
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  margin: -32px 0 0 -32px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.important-field {
+  color: #d9534f;
+}
+
+.pattern-error {
+  background-color: yellow;
+  color: red;
+}
+
+#affix {
+    position:fixed;
+    top: 20%;
+    z-index: 1031;
+    filter:alpha(opacity=50);
+    opacity:0.5;
+}
+
+#top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+#top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px; /* height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+#top-link-block {
+  z-index: 999999999;
+}
+
+#calendar-view .datepicker {
+  display: block !important;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 567px;
+}
+
+.datepicker-xxl .datepicker-inline {
+  font-size: x-large;
+  border: 2px solid #eee;
+  padding: 10px;
+  -webkit-box-shadow: 6px 6px 12px rgba(0,0,0,0.175);
+     -moz-box-shadow: 6px 6px 12px rgba(0,0,0,0.175);
+          box-shadow: 6px 6px 12px rgba(0,0,0,0.175);
+}
+
+#calendar-view table{
+  width: 100%;
+  min-height: 567px;
+  padding: 0px;
+}
+
+#calendar-view {
+  position: relative;
+}
+
+.notWorkingDay {
+  background-color: purple !important;
+  color: white !important;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.colleagueVacation {
+  background-color: aqua !important;
+  color: white !important;
+}
+
+.label-purple {
+  background-color: purple;
+}
+
+.label-aqua {
+  background-color: aqua;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.color-legend, .color-legend > li, .color-legend > ul, .color-legend > label {
+  margin: 0;
+}
+
+.color-legend > .label {
+  padding: 0.5em 1em;
+  margin: 1em;
+}

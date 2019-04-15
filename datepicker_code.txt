@@ -1,0 +1,19 @@
+// PARAMS DATEPICKER
+
+$('#sandbox-container div').datepicker({
+    todayBtn: "linked",
+    clearBtn: true,
+    language: "fr",
+    multidate: 25,
+    daysOfWeekDisabled: "0,6",
+    calendarWeeks: true,
+    todayHighlight: true,
+    beforeShowMonth: function (date){
+                    switch (date.getMonth()){
+                      case 8:
+                        return false;
+                    }
+                },
+    datesDisabled: ['07/06/2015', '07/21/2015'],
+    toggleActive: true
+});

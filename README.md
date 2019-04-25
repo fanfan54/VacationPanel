@@ -23,6 +23,7 @@ This code is **very** old, I wasn't at EPITECH and had no formation (I used vari
 [Download the repository (zip archive)](https://github.com/fanfan54/VacationPanel/archive/master.zip)
 
 ## How to use it?
+
 1. Install the prerequisites:
 
 * Apache2 (any version compatible with PHP 5.3)
@@ -30,15 +31,10 @@ This code is **very** old, I wasn't at EPITECH and had no formation (I used vari
 * MySQL Server Community (5.5.37)
 
 2. Download the VacationPanel repository from GitHub
-
 3. Import the `vacationpanel.sql` file to your database
-
 4. Fill your MySQL server informations manually in the `login.class.php` file *(for now, the `config.php` file is not used in the code)*
-
 5. (optional) if you want to use the built-in PHP server, run `php -S localhost:8080` in the repository folder
-
 6. Go to the index.php page on your web server (http://localhost:8080 if you used the built-in PHP server)
-
 7. Log in to the built-in user account:
 
 * Identifiant: francoislefevre

@@ -1,4 +1,4 @@
-<? 
+<?php
 require_once("config.php");
 if($GLOBALS['_setting_isFirstStart']){
 	require_once("_install.php");
@@ -9,9 +9,8 @@ session_start();
 header('Content-Type: text/html; charset=utf-8');
 mb_internal_encoding('UTF-8');
 
-if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_") // On vérifie que l'on n'est pas en mode XHR
-{ 
-?>
+// On vérifie que l'on n'est pas en mode XHR
+if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_"): ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,8 +26,7 @@ if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_") // On vérif
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-<?php
-}
+<?php endif;
 /**
  * Gestionnaire de congés par François LEFÈVRE
  * v1
@@ -99,34 +97,21 @@ if($GLOBALS['loginApp']->runLoginSystem()) {
 	$GLOBALS['content_generator'] = "loginApp"; // Le module de login affiche ses pages
 }
 
-/*TEST*/
-
-/*END*/
-
 // On génère le header de la page en HTML
-if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_") // On vérifie que l'on n'est pas en mode XHR
-{
-?>
-		<title><?=$GLOBALS["html_header_title"] ?></title>
-		<?
-		foreach($GLOBALS["html_stylesheets"] as $temp_stylesheet_href) {
-			?>
 
+// On vérifie que l'on n'est pas en mode XHR
+if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_"): ?>
+		<title><?=$GLOBALS["html_header_title"] ?></title>
+<?php foreach($GLOBALS["html_stylesheets"] as $temp_stylesheet_href): ?>
 		<link rel="stylesheet" href="<?=$temp_stylesheet_href ?>">
-			<?
-		}
-?>
+<?php endforeach; ?>
 
 	</head>
 	<body>
-		<? 
-		foreach($GLOBALS["notification"] as $temp_notification_content) {
-			?>
-
+<?php foreach($GLOBALS["notification"] as $temp_notification_content): ?>
 		<div class="<?=$temp_notification_content[1] ?>" role="alert"><?=$temp_notification_content[0] ?><button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button></div>
-			<?
-		}
-}
+<?php endforeach;
+endif;
 
 // On génère le contenu
 if(isset($GLOBALS['content_generator'])) {
@@ -141,21 +126,13 @@ if(isset($GLOBALS['content_generator'])) {
 	}
 }
 
-if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_") // On vérifie que l'on n'est pas en mode XHR
-{
-?>
+// On vérifie que l'on n'est pas en mode XHR
+if(!isset($_GET['action']) || substr($_GET['action'],0,4)!=="xhr_"): ?>
 		<script type="text/javascript" src="assets/javascript/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="assets/javascript/bootstrap.js"></script>
-
-<?
-// On génère le footer
-foreach($GLOBALS["html_scripts_imported"] as $temp_script_src) {
-		?>
+<?php foreach($GLOBALS["html_scripts_imported"] as $temp_script_src): ?>
 		<script type="text/javascript" src="<?=$temp_script_src ?>"></script>
-		<?
-}
-?>
-
+<?php endforeach; ?>
 	</body>
 </html>
-<? } ?>
+<?php endif; ?>

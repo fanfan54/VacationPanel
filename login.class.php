@@ -573,7 +573,7 @@ class OneFileLoginApplication
                         </header>
                         <div class="form-group">
                             <label for="login_input_username">Identifiant :</label>
-                            <input autofocus required type="text" class="form-control input-lg" name="login_input_username" id="login_input_username" placeholder="Par défaut : prenom.nom" <? if(isset($_POST['login_input_username'])){?>value="<?=$_POST['login_input_username'] ?>" <? } ?>size="30" maxlength="255"/>
+                            <input autofocus required type="text" class="form-control input-lg" name="login_input_username" id="login_input_username" placeholder="Par défaut : prenom.nom" <?php if(isset($_POST['login_input_username'])): ?>value="<?=$_POST['login_input_username'] ?>" <?php endif; ?>size="30" maxlength="255"/>
                         </div>
                         <div class="form-group">
                             <label for="login_input_password">Mot de passe : </label>
@@ -585,7 +585,7 @@ class OneFileLoginApplication
                     </form>
                 </div>
             </div>
-        <?
+        <?php
     }
 
     private function xhrCheckUsernameAvailability() {

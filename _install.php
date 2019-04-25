@@ -37,8 +37,9 @@ if(!empty($_POST['setup_input_hashcheck'])) {
     } catch ( Exception $e ) {
       // send error message if you can
     	?><div class="alert_banner alert alert-danger col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8 alert-dismissible fade in" role="alert"><?=$e->getMessage() ?><button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button></div>
-    <?
-    } 
+    <?php
+
+    }
 } else {
 	try
     {
@@ -56,11 +57,13 @@ if(!empty($_POST['setup_input_hashcheck'])) {
     } catch ( Exception $e ) {
       // send error message if you can
     	?><div class="alert_banner alert alert-danger col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-2 col-lg-8 alert-dismissible fade in" role="alert"><?=$e->getMessage() ?><button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button></div>
-    <?
+    <?php
+
     }
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -123,8 +126,7 @@ if(!empty($_POST['setup_input_hashcheck'])) {
       <section class="container">
 
         <form accept-charset="utf-8" method="post" action="<?=$_SERVER['SCRIPT_NAME'] ?>" name="setupform" class="col-md-10 col-md-offset-1">
-          <? if($_SESSION['is_server_admin']) {
-          	?>
+          <?php if($_SESSION['is_server_admin']): ?>
           	<div class="well">
           <fieldset>
           	<legend class="text-center">Informations essentielles</legend>
@@ -283,7 +285,7 @@ if(!empty($_POST['setup_input_hashcheck'])) {
               </div>
             </div>
           </div>
-          <?} else {?>
+    <?php else: ?>
           <div class="well well-danger">
 			<fieldset>
           	<legend class="text-center white">Confirmez votre identité</legend>
@@ -298,7 +300,7 @@ if(!empty($_POST['setup_input_hashcheck'])) {
             </div>
           </fieldset>
       </div>
-          <?}?>
+    <?php endif; ?>
           <div class="row form-group">
             <input type="submit" name="register_input_submit" value="Valider" id="register_input_submit" class="btn-lg col-xs-4 col-xs-offset-1 btn btn-primary" />
             <input type="reset" name="register_input_reset" value="Effacer" id="register_input_reset" class="btn-lg col-xs-4 col-xs-offset-2 btn btn-danger" />

@@ -8,7 +8,7 @@ PHP/HTML/Bootstrap full web app made at NETLOR SAS (during a 2 weeks internship 
 ## What is VacationPanel?
 VacationPanel is a **full-featured intranet application** (you'll need to log in with your account in order to use it) that allows enterprises to manage vacations/paid holidays for their staff.
 
-It uses **PHP** on the Apache2 web server (tested on PHP 5.3.10) and a **MySQL** database (tested on MySQL 5.5.37) as a backend, and a simple HTML5 front-end (using jQuery plugins, AJAX for some features), styled with **Twitter Bootstrap**.
+It uses **PHP** on the Apache2 web server (tested on PHP 5.3.10 and 7.2.17) and a **MySQL** database (tested on MySQL 5.5.37 and MariaDB 10.3.12) as a backend, and a simple HTML5 front-end (using jQuery plugins, AJAX for some features), styled with **Twitter Bootstrap**.
 
 The front-end, and some parts of the code, are in french.
 
@@ -35,15 +35,24 @@ This code is **very** old, I wasn't at EPITECH and had no formation (I used vari
 
 4. Fill your MySQL server informations manually in the `login.class.php` file *(for now, the `config.php` file is not used in the code)*
 
-5. Go to the index.php page on your web server
+5. (optional) if you want to use the built-in PHP server, run `php -S localhost:8080` in the repository folder
 
-6. Log in to the built-in user account:
+6. Go to the index.php page on your web server (http://localhost:8080 if you used the built-in PHP server)
+
+7. Log in to the built-in user account:
 
 * Identifiant: francoislefevre
 * Mot de passe (password): stagiaire1
 
 
 You'll be redirected to the sign-up page. Create any account you want!
+
+### Alternative setup/dependencies
+
+VacationPanel has been tested and is working with a more recent setup:
+* PHP 7.2.17 (using its built-in server)
+* MariaDB 10.3.12
+
 
 ## User roles
 

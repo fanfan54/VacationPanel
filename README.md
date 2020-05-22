@@ -17,7 +17,7 @@ They asked me to do it in order to acquire web development skills, and to (maybe
 
 This code is **very** old, I wasn't at EPITECH and had no formation (I used various MOOCs and tutorials on the web to write this code, that's all), so there can be some errors or bad code.
 
-**I never finished it, many functions are missing/not implemented. Feel free to make pull request to add some new code! :-)**
+**I never finished it, many functions are missing/not implemented. Feel free to make pull requests to add some new code! :-)**
 
 ## Download
 [Download the repository (zip archive)](https://github.com/fanfan54/VacationPanel/archive/master.zip)

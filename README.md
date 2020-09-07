@@ -58,7 +58,7 @@ There are 3 roles available for the accounts, with different permissions:
 * **gestionnaire** ("manager" in french): he can manage vacations ("Gérer les congés"), manage the staff he's affected to (in "Gérer les employés"), and create "employé" accounts.
 * **employé** ("staff/employee" in french, referenced in code as "worker"): he can only ask for vacations (in "Demander mes congés") on the datepicker
 
-A single user can have multiple roles, and that there can be as many users as you want. You can event create multiple "admin" accounts.
+A single user can have multiple roles, and there can be as many users as you want. You can even create multiple "admin" accounts.
 
 ## Modules
 
